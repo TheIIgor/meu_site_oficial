@@ -9,6 +9,7 @@
 
 /* Configurações gerais */
 html, body {
+    background-color: #000000;
     background-image: url('../fotos/facebook.png') !important;
     background-repeat: no-repeat;
     background-size: cover;
