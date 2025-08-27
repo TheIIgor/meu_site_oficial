@@ -13,6 +13,7 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    backdrop-filter: blur(5px);    
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -53,7 +54,7 @@ html, body {
     /* Centraliza horizontalmente */
     justify-content: center;
     /* Centraliza verticalmente */
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(55px);
     /* Efeito de desfoque */
     background-color: #00000000;
     /* Cor de fundo com transparência */
