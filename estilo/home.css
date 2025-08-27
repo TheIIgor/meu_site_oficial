@@ -9,7 +9,7 @@
 
 /* Configurações gerais */
 html, body {
-    background-image: url("D:\Arquivos Pessoais\Igor Ribeiro\estudos\meu_site_oficial\estilo\fundo.jpg") !important;
+    background-image: url('../fotos/facebook.png') !important;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
