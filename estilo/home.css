@@ -10,6 +10,7 @@
 /* Configurações gerais */
 html,
 body {
+    background-color: black;
     display: flex;
     /* Permite usar flexbox */
     flex-direction: column;
