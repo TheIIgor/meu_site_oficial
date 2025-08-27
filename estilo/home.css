@@ -53,9 +53,8 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed; /* Manter a imagem fixa */
-    filter: blur(5px); /* Ajuste o valor (ex: 5px) para mais ou menos blur */
+    filter: blur(100%); /* Ajuste o valor (ex: 5px) para mais ou menos blur */
     z-index: -1; /* Coloca este elemento atrás de todo o conteúdo */
-}
 }
 /* Estilo para o conteúdo */
 .content {
