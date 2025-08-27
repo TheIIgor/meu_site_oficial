@@ -18,7 +18,6 @@ html, body {
 }
 
 #myimg{
-    background-color: #00000049;
     position: fixed;
     /* Fixa o vídeo na tela */
     top: 0;
@@ -41,6 +40,22 @@ html, body {
     /* Ocupa toda a altura */
     object-fit: cover;
     filter: blur(10px); /* Ajuste o valor (ex: 5px) para mais ou menos blur */
+}
+
+#myimg::before{
+    content: ""; /* Necessário para pseudo-elementos */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../fotos/fundo.jpg"); /* A imagem de fundo agora vai aqui */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Manter a imagem fixa */
+    filter: blur(5px); /* Ajuste o valor (ex: 5px) para mais ou menos blur */
+    z-index: -1; /* Coloca este elemento atrás de todo o conteúdo */
+}
 }
 /* Estilo para o conteúdo */
 .content {
