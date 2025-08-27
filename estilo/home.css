@@ -19,7 +19,7 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    filter: blur(50%); /* Aplica o filtro aqui */
+
 }
 
 /* Estilo para o conteúdo */
