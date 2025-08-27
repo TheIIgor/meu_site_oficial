@@ -15,13 +15,10 @@ html, body {
     overflow-x: hidden;
     padding: 0;
     margin: 0;
-    background-image: url('../fotos/whitewallpaper.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
-#myimg{;
+#myimg{
+    background-color: #00000049;
     position: fixed;
     /* Fixa o vídeo na tela */
     top: 0;
