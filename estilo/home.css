@@ -1,0 +1,770 @@
+@charset "UTF-8";
+/* Define a codificação do arquivo */
+/* Importa a fonte Press Start 2P */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* Importa a fonte Press Start 2P */
+/* Importa a fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Importa a fonte Poppins */
+
+/* Configurações gerais */
+html,
+body {
+    display: flex;
+    /* Permite usar flexbox */
+    flex-direction: column;
+    /* Alinha os elementos verticalmente */
+    min-height: 100vh;
+    /* Ocupa toda a altura da tela */
+    overflow-x: hidden;
+    /* Esconde a barra de rolagem horizontal */
+    width: 100%;
+    /* Ocupa toda a largura */
+    padding: 0;
+    /* Remove o espaçamento padrão */
+    margin: 0;
+    /* Remove a margem padrão */
+}
+
+/* Estilo para o contêiner do vídeo */
+.video-background {
+    position: fixed;
+    /* Fixa o vídeo na tela */
+    top: 0;
+    /* Alinha no topo da página */
+    left: 0;
+    /* Alinha à esquerda */
+    width: 100%;
+    /* Ocupa toda a largura */
+    height: 100%;
+    /* Ocupa toda a altura */
+    z-index: -1;
+    /* Coloca o vídeo atrás do conteúdo */
+    overflow: hidden;
+    /* Esconde as barras de rolagem */
+    display: flex;
+    /* Permite usar flexbox */
+}
+
+/* Estilo para o vídeo */
+#myVideo {
+    min-width: 100%;
+    /* Ocupa toda a largura */
+    min-height: 100%;
+    /* Ocupa toda a altura */
+    object-fit: cover;
+    /* Garante que o vídeo cubra toda a área */
+}
+
+/* Estilo para o conteúdo */
+.content {
+    position: relative;
+    /* Permite posicionar os elementos filhos */
+    z-index: 1;
+    /* Coloca o conteúdo na frente do vídeo */
+    color: white;
+    /* Cor do texto */
+    text-align: center;
+    /* Alinha o texto ao centro */
+    padding: 20px;
+    /* Espaçamento interno */
+}
+
+/* Header fixo e centralizado */
+.inicial {
+    position: fixed;
+    /* Fixa o header no topo */
+    top: 0;
+    /* Alinha no topo da página */
+    left: 0;
+    /* Alinha à esquerda */
+    width: 100%;
+    /* Ocupa toda a largura */
+    display: flex;
+    /* Permite usar flexbox */
+    flex-direction: column;
+    /* Alinha os elementos verticalmente */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+    backdrop-filter: blur(5px);
+    /* Efeito de desfoque */
+    background-color: #00000000;
+    /* Cor de fundo com transparência */
+    z-index: 1000;
+    /* Garante que fique acima de outros elementos */
+    padding: 10px 0;
+    /* Espaçamento interno */
+    margin: 0;
+    /* Remove a margem padrão */
+    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219);
+    /* Sombra */
+}
+
+/* Estilo do título */
+.inicial h1 {
+    color: white;
+    /* Cor do título */
+    font-size: 44px;
+    /* Tamanho da fonte */
+    margin: 0;
+    /* Remove a margem padrão */
+    padding: 0;
+    /* Remove o espaçamento padrão */
+    text-align: center;
+    /* Alinha o texto ao centro */
+    display: inline-block;
+    /* Permite ajustar a largura do elemento */
+    white-space: nowrap;
+    /* Impede que o texto quebre */
+    font-family: "Poppins", sans-serif;
+    /* Fonte do texto */
+    font-weight: 100;
+    /* Peso da fonte */
+    font-style: normal;
+    /* Estilo da fonte */
+}
+
+/* Estilo da navegação */
+.inicial nav {
+    display: flex;
+    /* Permite usar flexbox */
+    margin: 10px 0;
+    /* Espaçamento externo */
+    gap: 10px;
+    /* Espaçamento entre os elementos */
+    justify-content: center;
+    /* Centraliza os itens da navegação */
+    flex-wrap: wrap;
+    /* Quebra a linha se não couber na tela */
+    border-radius: 10px;
+    /* Borda arredondada */
+}
+
+/* Estilo da lista de navegação */
+.inicial nav ul {
+    list-style: none;
+    /* Remove a marcação da lista */
+    padding: 0;
+    /* Remove o espaçamento interno */
+    margin: 0;
+    /* Remove a margem padrão */
+    display: flex;
+    /* Permite usar flexbox */
+    justify-content: center;
+    /* Centraliza os itens da lista */
+}
+
+/* Estilo dos itens da navegação */
+.inicial nav ul li {
+    display: inline-block;
+    /* Permite ajustar a largura do elemento */
+    margin-right: 20px;
+    /* Espaçamento à direita */
+}
+
+/* Estilo do link */
+.inicial nav ul li a {
+    color: white;
+    /* Cor do texto */
+    font-family: "Poppins", sans-serif;
+    /* Fonte do texto */
+    font-weight: 100;
+    /* Peso da fonte */
+    font-style: normal;
+    /* Estilo da fonte */
+    font-size: 20px;
+    /* Tamanho da fonte */
+    padding: 10px;
+    /* Espaçamento interno */
+    margin: 10px;
+    /* Espaçamento externo */
+    text-decoration: none;
+    /* Remove o sublinhado */
+    border-radius: 30px;
+    /* Borda arredondada */
+    text-align: center;
+    /* Alinha o texto ao centro */
+    display: inline-block;
+    /* Permite ajustar a largura do elemento */
+}
+
+/* Estilo do link ativo */
+.inicial nav ul li a:hover {
+    background-color: #ffffff30;
+    /* Cor de fundo com transparência */
+    border-radius: 30px;
+    /* Borda arredondada */
+    margin: 10px;
+    /* Espaçamento externo */
+    padding: 10px;
+    /* Espaçamento interno */
+    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219);
+    /* Sombra */
+
+}
+
+
+/* Estilo para a aba ativa */
+.active {
+    background-color: #ffffff30;
+    font-weight: bold;
+}
+
+/* Estilo do botão de contato */
+.botao {
+    position: relative;
+    /* Permite posicionar a janela de informações relativamente ao botão */
+    padding: 0;
+    /* Remove o espaçamento interno */
+    margin: 0;
+    /* Remove a margem padrão */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+    border: none;
+    /* Remove a borda */
+    backdrop-filter: blur(10s);
+    /* Efeito de desfoque */
+    background-color: #ffffff00;
+    /* Cor de fundo com transparência */
+}
+
+/* Estilo do botão de contato */
+.botao img {
+    width: 50px;
+    /* Largura da imagem */
+    height: 50px;
+    /* Altura da imagem */
+    padding: auto;
+    /* Espaçamento interno */
+    margin: auto;
+    /* Espaçamento externo */
+}
+
+/* Estilo do botão de contato ao passar o mouse */
+.botao img:hover {
+    background-color: #ffffff30;
+    /* Cor de fundo com transparência */
+    border-radius: 30px;
+    /* Borda arredondada */
+    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219);
+    /* Sombra */
+    padding: 0;
+    /* Espaçamento interno */
+    margin: 0;
+    /* Espaçamento externo */
+}
+
+/* Estilo do contêiner do botão de contato */
+.botao-container:hover .contato-info,
+.botao-container:focus-within .contato-info {
+    display: block;
+    /* Mostra a janela de informações */
+}
+
+
+/* Estilo da janela de informações */
+.contato-info {
+    display: none;
+    /* Inicialmente escondido */
+    position: absolute;
+    /* Permite posicionar a janela de informações */
+    top: -50%;
+    /* Posiciona a janela abaixo do botão */
+    left: 105%;
+    /* Centraliza horizontalmente */
+    transform: translateX(-50%);
+    /* Ajusta o posicionamento*/
+    background-color: #ffffff30;
+    /* Cor de fundo com transparência */
+    border-radius: 30px;
+    /* Borda arredondada */
+    padding: 15px;
+    /* Espaçamento interno */
+    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219);
+    /* Sombra */
+    width: 280px;
+    /* Largura da janela */
+    z-index: 1000;
+    /* Garante que fique acima de outros elementos */
+    text-align: center;
+    /* Alinha o texto ao centro */
+    word-wrap: break-word;
+    /* Quebra de linha automática */
+    transform: translate3d(0, 0, 0);
+    /* Corrige o bug de renderização */
+}
+
+/* Mostrar a janela de informações ao passar o mouse */
+.botao:hover .contato-info {
+    display: block;
+    /* Mostra a janela de informações */
+}
+
+/* Estilo dos textos dentro da janela de informações */
+.contato-info p {
+    margin: 10px 0;
+    /* Espaçamento externo */
+    font-size: 20px;
+    /* Tamanho da fonte */
+    color: #ffffff;
+    /* Cor do texto */
+    line-height: 0.9;
+    /* Espaçamento entre as linhas */
+    word-wrap: break-word;
+    /* Quebra de linha automática */
+
+}
+
+/* Estilo dos links dentro da janela de informações */
+.contato-info a,
+.linkedin {
+    color: #ffffff;
+    /* Cor do texto */
+    font-weight: bold;
+    /* Texto em negrito */
+    font-size: 14px;
+    /* Texto em negrito */
+    text-decoration: none;
+    /* Texto em negrito */
+    font-family: "Poppins", sans-serif;
+    /* Texto em negrito */
+    font-weight: 100;
+    /* Texto em negrito */
+    font-style: normal;
+    /* Texto em negrito */
+}
+
+/* Estilo dos links ao passar o mouse */
+.contato-info a:hover,
+.abrir-whatsapp:hover {
+    text-decoration: underline;
+    /* Texto em negrito */
+    word-wrap: break-word;
+    /* Texto em negrito */
+    font-weight: bold;
+    /* Texto em negrito */
+    font-family: "Poppins", sans-serif;
+    /* Texto em negrito */
+    font-weight: 100;
+    /* Texto em negrito */
+    font-style: normal;
+    /* Texto em negrito */
+    margin: 0;
+    /* Texto em negrito */
+    padding: 0;
+    /* Texto em negrito */
+}
+
+/* Estilo do link de e-mail */
+.email-link {
+    cursor: pointer;
+    /* Texto em negrito */
+    color: #ffffff;
+    /* Cor do texto */
+}
+
+/* Estilo do link de e-mail ao passar o mouse */
+.abrir-whatsapp {
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+    color: #ffffff;
+    /* Cor do texto */
+    font-weight: bold;
+    /* Texto em negrito */
+    font-size: 14px;
+    /* Texto em negrito */
+    font-family: "Poppins", sans-serif;
+    /* Texto em negrito */
+    font-weight: 100;
+    /* Texto em negrito */
+    font-style: normal;
+    /* Texto em negrito */
+}
+
+/* Conteúdo principal */
+.principal {
+    flex: 1;
+    /* Ocupa o espaço restante */
+    display: flex;
+    /* Texto em negrito */
+    flex-direction: column;
+    /* Texto em negrito */
+    align-items: center;
+    /* Texto em negrito */
+    justify-content: center;
+    /* Texto em negrito */
+    width: 100%;
+    /* Texto em negrito */
+    padding: 50px;
+    /* Texto em negrito */
+}
+
+.principal h2 {
+    color: white;
+    /* Texto em negrito */
+    font-family: "Poppins", sans-serif;
+    /* Texto em negrito */
+    font-weight: 100;
+    /* Texto em negrito */
+    font-style: normal;
+    /* Texto em negrito */
+    font-size: 80px;
+    /* Texto em negrito */
+    margin: 0;
+    /* Texto em negrito */
+    margin-top: 140px;
+    /* Texto em negrito */
+    margin-right: 65px;
+    /* Texto em negrito */
+    padding: auto;
+    /* Texto em negrito */
+    text-align: center;
+    /* Texto em negrito */
+    backdrop-filter: blur(7px);
+    /* Efeito de desfoque */
+    background-color: #000000;
+    /* Texto em negrito */
+    ;
+    /* Texto em negrito */
+    border-radius: 30px;
+    /* Texto em negrito */
+}
+
+.principal h2:hover{
+    transform: translateY(-5px);
+    background-color: rgba(0, 0, 0, 0.521);
+    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219); /* Texto em negrito */
+}
+
+/* Estilo do subtítulo principal */
+.final {
+    display: flex;
+    /* Texto em negrito */
+    justify-content: space-between;
+    /* Texto em negrito */
+    justify-content: center;
+    /* Texto em negrito */
+    align-items: center;
+    /* Texto em negrito */
+    backdrop-filter: blur(5px);
+    /* Efeito de desfoque */
+    background-color: #00000000;
+    /* Texto em negrito */
+    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219);
+    /* Texto em negrito */
+    padding: 10px 20px;
+    /* Texto em negrito */
+    width: 100%;
+    /* Texto em negrito */
+    margin-top: auto;
+    /* Empurra o footer para o final */
+    flex-wrap: wrap;
+    /* Texto em negrito */
+    font-family: "Poppins", sans-serif;
+    /* Texto em negrito */
+    font-weight: 100;
+    /* Texto em negrito */
+    font-style: normal;
+    /* Texto em negrito */
+
+}
+
+/* Estilo do texto do footer */
+.final p {
+    color: white;
+    /* Texto em negrito */
+    font-size: 18px;
+    /* Texto em negrito */
+    text-decoration: none;
+    /* Texto em negrito */
+    border-radius: 10px;
+    /* Texto em negrito */
+    margin: 0;
+    /* Texto em negrito */
+    padding: 0;
+    /* Texto em negrito */
+    display: inline-block;
+    /* Texto em negrito */
+<<<<<<< HEAD
+=======
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    display: flex;
+}
+
+#myVideo {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.inicial {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    background-color: #00000000;
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219);
+}
+
+.inicial h1 {
+    color: white;
+    font-size: 44px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.inicial nav {
+    display: flex;
+    margin: 0;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.inicial nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.inicial nav ul li {
+    display: inline-block;
+}
+
+.inicial nav ul li a {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 30px;
+    text-align: center;
+    display: inline-block;
+}
+
+.inicial nav ul li a:hover {
+    background-color: #ffffff30;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219);
+}
+
+.active {
+    background-color: #ffffff30;
+    font-weight: bold;
+}
+
+.botao {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    backdrop-filter: blur(10s);
+    background-color: #ffffff00;
+}
+
+.botao img {
+    width: 50px;
+    height: 50px;
+    padding: auto;
+    margin: auto;
+}
+
+.botao img:hover {
+    background-color: #ffffff30;
+    border-radius: 30px;    
+    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219);    
+    padding: 0;
+    margin: 0;
+}
+
+.botao-container:hover .contato-info,
+.botao-container:focus-within .contato-info {
+    display: block;
+}
+
+.contato-info {
+    display: none;
+    position: absolute;
+    top: -50%;
+    left: 105%;
+    transform: translateX(-50%);
+    background-color: #ffffff30;
+    border-radius: 30px;
+    padding: 15px;
+    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219);
+    width: 280px;
+    z-index: 1000;
+    text-align: center;
+    word-wrap: break-word;
+    transform: translate3d(0, 0, 0);
+}
+
+.botao:hover .contato-info {
+    display: block;
+}
+
+.contato-info p {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 0.9;
+    word-wrap: break-word;
+}
+
+.contato-info a,
+.linkedin {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.contato-info a:hover,
+.abrir-whatsapp:hover {
+    text-decoration: underline;
+    word-wrap: break-word;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.email-link {
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.abrir-whatsapp {
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.principal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0px;
+}
+
+.principal h2 {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 80px;
+    margin: 0;
+    margin-top: 140px;    
+    margin-right: 65px;    
+    padding: auto;
+    text-align: center;
+    backdrop-filter: blur(7px);
+    background-color: #000000;
+    border-radius: 30px;
+}
+
+.principal h2:hover{
+    transform: translateY(-5px);
+    background-color: rgba(0, 0, 0, 0.521);
+    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219);
+}
+
+.final {
+    display: flex;   
+    justify-content: space-between;  
+    justify-content: center;   
+    align-items: center;   
+    backdrop-filter: blur(5px);   
+    background-color: #00000000;    
+    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219); 
+    width: 100%;
+    margin-top: auto;
+    flex-wrap: wrap;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.final p {
+    color: white;;
+    font-size: 18px;;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+<<<<<<< HEAD
+    /* Texto em negrito */
+>>>>>>> f556fc8 (..)
+=======
+>>>>>>> 685d510 (update remove comments)
+=======
+>>>>>>> parent of fa3497d (Salvando alterações locais antes do pull)
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/servico.css">
+    <link rel="shortcut icon" href="fotos/Codelink.png" type="image/x-icon">
+    <title>Serviços | CodingLink</title>
+</head>
+
+<body>
+
+    <div class="video-background5">
+        <video autoplay muted loop id="myVideo5">
+            <source src="fotos/vecteezy_ai-generated-abstract-background-with-glowing-hexagons-3d_40716786.mp4"
+                type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+    </div>
+
+    <header class="inicial5">
+        <h1>CodingLink</h1>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index2.html">Sobre</a></li>
+                    <li><a href="index3.html">Serviços</a></li>
+                    <li><a href="index4.html">Portfólio</a></li>
+                </ul>
+                <button class="botao5">
+                    <img src="fotos/cardapio.png" alt="Texto alternativo" width="20" height="20">
+                    <div class="contato-info5">
+                        <p><a href="mailto:igorribeiro793@gmail.com" target="_blank" class="email-link">Email:
+                                igorribeiro793@gmail.com</a></p>
+                        <p><span class="abrir-whatsapp">WhatsApp: +55 (11)939469382</span></p>
+                        <p><span class="linkedin"><a href="https://www.linkedin.com/in/igor-ribeiro-b974a923a/"
+                                    target="_blank">LinkedIn: Igor Ribeiro</a></span></p>
+                    </div>
+                </button>
+                <script>
+                    // Função para abrir o WhatsApp ao clicar no texto
+                    document.querySelector('.abrir-whatsapp').addEventListener('click', function () {
+                        const telefone = '+5511939469382'; // Substitua pelo seu número (formato internacional)
+                        const mensagem = 'Olá! Seja bem-vindo a CodeLink. Como podemos te ajudar?'; // Mensagem padrão'
+                        const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+                        window.open(url, '_blank');
+                    });
+                </script>
+                <script>
+                    // Função para o e-mail: escolher entre copiar ou abrir o cliente de e-mail
+                    document.querySelector('.copiar-ou-email').addEventListener('click', function () {
+                        const email = 'exemplo@email.com'; // Substitua pelo seu e-mail
+
+                        // Pergunta ao usuário o que ele deseja fazer
+                        const escolha = confirm('Deseja copiar o e-mail ou abrir o cliente de e-mail?\n\nClique em "OK" para copiar o e-mail.\nClique em "Cancelar" para abrir o cliente de e-mail.');
+
+                        if (escolha) {
+                            // Copiar o e-mail
+                            navigator.clipboard.writeText(email).then(function () {
+                                alert('E-mail copiado: ' + email);
+                            }).catch(function () {
+                                alert('Erro ao copiar o e-mail.');
+                            });
+                        } else {
+                            // Abrir o cliente de e-mail
+                            window.location.href = `mailto:${email}`;
+                        }
+                    });
+                </script>
+                <script>
+                    // Captura o nome da página atual
+                    const paginaAtual = window.location.pathname.split("/").pop();
+            
+                    // Seleciona todos os links do menu
+                    const links = document.querySelectorAll("nav a");
+            
+                    links.forEach(link => {
+                        // Se o href do link contém a página atual, adiciona a classe "active"
+                        if (link.getAttribute("href") === paginaAtual) {
+                            link.classList.add("active");
+                        }
+                    });
+                </script>
+                </button>
+            </nav>
+        </section>
+    </header>
+
+    <div class="container5">
+        <h2>Oferecemos soluções inovadoras para o seu negócio</h2>
+
+        <div class="service">
+            <h3>Consultoria em Programação</h3>
+            <p>Precisa de orientação especializada para seu projeto de programação? Nossa consultoria oferece soluções
+                personalizadas para ajudar você a alcançar seus objetivos com eficiência. Trabalhamos com você para
+                analisar suas necessidades, otimizar processos e garantir que seu projeto seja entregue com qualidade e
+                no prazo. Vamos transformar suas ideias em código!</p>
+        </div>
+
+        <div class="service">
+            <h3>Desenvolvimento de Websites</h3>
+            <p>Transforme sua presença online com um site profissional, moderno e funcional. Criamos sites responsivos,
+                de fácil navegação e otimizados para SEO. Seja para um site institucional, portfólio ou loja online,
+                podemos ajudá-lo a construir um site que se destaque na web e atenda às suas necessidades específicas.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>Desenvolvimento de Aplicações Personalizadas</h3>
+            <p>Quer uma solução de software sob medida? Criamos aplicações web e mobile personalizadas, desenvolvidas
+                para atender de forma exclusiva às necessidades do seu negócio. Trabalhamos lado a lado para entender
+                seus desafios e criar soluções eficientes, escaláveis e fáceis de usar.</p>
+        </div>
+
+        <div class="service">
+            <h3>Tutoriais e Cursos de Programação</h3>
+            <p>Está começando no mundo da programação ou quer aprimorar suas habilidades? Oferecemos tutoriais e cursos
+                personalizados para diferentes níveis de conhecimento. Desde iniciantes até programadores experientes,
+                podemos ajudá-lo a aprender novas linguagens, frameworks e práticas de desenvolvimento.</p>
+        </div>
+
+        <div class="service">
+            <h3>Suporte Técnico e Manutenção</h3>
+            <p>Se seu site ou aplicação está com problemas ou precisa de ajustes, nosso serviço de suporte técnico está
+                à disposição para resolver. Oferecemos manutenção contínua para garantir que seu sistema esteja sempre
+                funcionando de maneira otimizada. Conte conosco para cuidar da parte técnica, enquanto você foca no
+                crescimento do seu negócio.</p>
+        </div>
+
+        <div class="service">
+            <h3>Desenvolvimento de Chatbots</h3>
+            <p>Automatize seu atendimento ao cliente com nossos chatbots personalizados. Criamos soluções inteligentes
+                para melhorar a experiência do usuário e otimizar o suporte, oferecendo respostas rápidas e precisas 24
+                horas por dia. Aumente a eficiência do seu negócio com a tecnologia de IA.</p>
+        </div>
+
+        <div class="service">
+            <h3>Otimização de Código e Performance</h3>
+            <p>Seu código está lento ou com problemas de performance? Podemos ajudar a otimizar e melhorar a eficiência
+                do seu sistema. Revisamos seu código para identificar gargalos e áreas de melhoria, garantindo uma
+                performance mais rápida, estável e segura, proporcionando a melhor experiência para os usuários.</p>
+        </div>
+
+        <div class="service">
+            <h3>Desenvolvimento de Sistemas Corporativos</h3>
+            <p>Precisando de um sistema interno para otimizar processos? Desenvolvemos sistemas corporativos sob medida,
+                com funcionalidades específicas para o seu negócio, como gestão de estoque, controle financeiro e muito
+                mais. Aumente a produtividade e reduza erros com soluções eficientes e personalizadas.</p>
+        </div>
+
+    </div>
+    <footer class="final5">
+        <p>Todos os direitos reservados &copy;2025</p>
+    </footer>
+
+</body>
+
+>>>>>>> 6b8052b (..)
+</html>
