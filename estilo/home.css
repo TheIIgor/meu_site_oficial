@@ -15,47 +15,12 @@ html, body {
     overflow-x: hidden;
     padding: 0;
     margin: 0;
-}
-
-#myimg{
-    position: fixed;
-    /* Fixa o vídeo na tela */
-    top: 0;
-    /* Alinha no topo da página */
-    left: 0;
-    /* Alinha à esquerda */
-    width: 100%;
-    /* Ocupa toda a largura */
-    height: 100%;
-    /* Ocupa toda a altura */
-    z-index: -1;
-    /* Coloca o vídeo atrás do conteúdo */
-    overflow: hidden;
-    /* Esconde as barras de rolagem */
-    display: flex;
-    /* Permite usar flexbox */
-   min-width: 100%;
-    /* Ocupa toda a largura */
-    min-height: 100%;
-    /* Ocupa toda a altura */
-    object-fit: cover;
-    filter: blur(10px); /* Ajuste o valor (ex: 5px) para mais ou menos blur */
-}
-
-#myimg::before{
-    content: ""; /* Necessário para pseudo-elementos */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../fotos/fundo.jpg"); /* A imagem de fundo agora vai aqui */
+    background-image: url('fundo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed; /* Manter a imagem fixa */
-    filter: blur(100%); /* Ajuste o valor (ex: 5px) para mais ou menos blur */
-    z-index: -1; /* Coloca este elemento atrás de todo o conteúdo */
+    background-attachment: fixed;
 }
+
 /* Estilo para o conteúdo */
 .content {
     position: relative;
