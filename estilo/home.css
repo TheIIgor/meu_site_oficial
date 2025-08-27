@@ -42,7 +42,8 @@ html, body {
     /* Ocupa toda a largura */
     min-height: 100%;
     /* Ocupa toda a altura */
-    object-fit: cover;    
+    object-fit: cover;
+    filter: blur(10px); /* Ajuste o valor (ex: 5px) para mais ou menos blur */
 }
 /* Estilo para o conteúdo */
 .content {
