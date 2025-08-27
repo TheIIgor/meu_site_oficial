@@ -15,25 +15,6 @@ html, body {
     margin: 0; /* Remove a margem padrão */
 }
 
-/* Estilo para o contêiner do vídeo */
-.video-background5 {
-    position: fixed; /* Fixa o vídeo na tela */
-    top: 0; /* Alinha no topo da página */
-    left: 0; /* Alinha à esquerda */
-    width: 100%; /* Ocupa toda a largura */
-    height: 100%; /* Ocupa toda a altura */
-    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
-    overflow: hidden; /* Esconde as barras de rolagem */
-    display: flex; /* Permite usar flexbox */
-}
-
-/* Estilo para o vídeo */
-#myVideo5 {
-    min-width: 100%; /* Ocupa toda a largura */
-    min-height: 100%; /* Ocupa toda a altura */
-    object-fit: cover; /* Garante que o vídeo cubra toda a área */
-}
-
 /* Estilo para o conteúdo */
 .content {
     position: relative; /* Permite posicionar os elementos filhos */
