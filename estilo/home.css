@@ -9,7 +9,7 @@
 
 /* Configurações gerais */
 html, body {
-    background-image: url('../fotos/whitewallpaper.jpg') !important;
+    background-image: url('../fotos/fundo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
