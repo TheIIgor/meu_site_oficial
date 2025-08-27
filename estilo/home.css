@@ -19,12 +19,6 @@ html, body {
     overflow-x: hidden;
     padding: 0;
     margin: 0;
-    background-image: url('estilo/fundo.jpg') !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;
-    backdrop-filter: blur
-
 }
 
 /* Estilo para o conteúdo */
