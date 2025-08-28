@@ -144,7 +144,7 @@ html, body {
     display: block;
 }
 
-.contato-info p, .contato-info a, .abrir-whatsapp{
+.contato-info p, .contato-info a, .abrir-whatsapp p{
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
@@ -156,10 +156,12 @@ html, body {
     margin: 10;
     padding: 10;
 }
-.contato-info a:hover, .abrir-whatsapp:hover, .abrir-linkedin:hover {
+.contato-info a:hover, .contato-info p:hover, .abrir-linkedin:hover {
     text-decoration: underline;
+    font-weight: 300;
     color: #ffffff;
 }
+
 .principal {
     flex: 1;
     display: flex;
