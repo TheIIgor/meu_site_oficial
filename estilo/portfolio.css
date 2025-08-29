@@ -7,33 +7,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* Importa a fonte Poppins */
 
-/* Estilos padrões (Mobile First) */
+/* --- RESPONSIVIDADE --- */
 
-/* Tablets (largura mínima de 768px) */
-@media (min-width: 768px) {
-    body {
+/* Tablets (largura máxima de 1024px) */
+@media (max-width: 1024px) {
+    .inicial-item h1 {
+        font-size: 36px;
+    }
+
+    .inicial-item nav ul {
+        gap: 20px;
+    }
+
+    .container-item h1 {
+        font-size: 48px;
+    }
+
+    .container-item p {
+        font-size: 25px;
+    }
+
+    .container-item p > span {
+        font-size: 38px;
+    }
+
+    .botao img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+/* Celulares pequenos (largura máxima de 480px) */
+@media (max-width: 480px) {
+    .inicial-item h1 {
+        font-size: 22px;
+    }
+
+    .container-item h1 {
+        font-size: 32px;
+    }
+
+    .container-item p {
         font-size: 18px;
+        padding: 6px;
     }
 
-    .container {
-        width: 80%;
-        margin: auto;
+    .container-item p > span {
+        font-size: 26px;
+    }
+
+    .botao img {
+        width: 40px;
+        height: 40px;
     }
 }
 
-/* Telas médias (largura mínima de 1024px) */
-@media (min-width: 1024px) {
-    .menu {
-        display: flex;
-        justify-content: space-between;
-    }
-}
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+  /* Título principal do header */
+  .inicial-item h1 {
+    font-size: 24px;
+    white-space: normal; /* permite quebrar linha */
+  }
 
-/* Telas grandes (largura mínima de 1200px) */
-@media (min-width: 1200px) {
-    .container {
-        width: 70%;
-    }
+  /* Menu */
+  .inicial-item nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .inicial-item nav ul li a {
+    font-size: 14px;
+    padding: 6px 8px;
+    margin: 3px;
+  }
+
+  /* Container principal */
+  .container-item {
+    width: 95%; /* ocupar quase toda a tela */
+    padding: 10px;
+  }
+
+  .container-item h1 {
+    font-size: 28px;
+    margin: 8px 0;
+  }
+
+  .container-item p {
+    font-size: 16px;
+    margin: 6px 0;
+    padding: 6px;
+  }
+
+  /* Botão de contato */
+  .botao img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contato-info {
+    width: 180px;
+    height: auto;
+    font-size: 12px;
+  }
 }
 
 /* Configurações gerais */

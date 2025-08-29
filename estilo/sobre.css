@@ -5,6 +5,38 @@
     /* Importa a fonte Press Start 2P */
     /* Importa a fonte Poppins */
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    /* --- RESPONSIVIDADE --- */
+@media (max-width: 1024px) {
+    .p1, .p2 {
+        font-size: 24px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .inicial1 h1 {
+        font-size: 26px;
+    }
+    .inicial1 nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .p1, .p2 {
+        font-size: 20px;
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .inicial1 h1 {
+        font-size: 20px;
+    }
+    .p1, .p2 {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
     /* Importa a fonte Poppins */
 
     /* Configurações gerais */
@@ -33,21 +65,17 @@
 
     /* Header fixo e centralizado */
     .inicial1 {
-        position: none;
-        top: 0;
-        left: 0;
-        width: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        backdrop-filter: blur(100%);
-        background-color: #00000000;
-        z-index: 1000;
-        padding: 0;
-        margin: 0;
-    }
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 10px 0;
+}
     /* Estilo do título */
     .inicial1 h1 {
         color: white;
@@ -190,31 +218,29 @@
 
 
     .principal1 {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding: 0;
-    }
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 140px; /* compensa altura do header */
+}
 
-    .p1,
-    .p2 {
-        color: white;
-        font-family: "Poppins", sans-serif;
-        font-weight: 200;
-        font-style: normal;
-        font-size: 29px;
-        width: 700px;
-        margin: 10px;
-        padding: 10px;
-        text-align: center;
-        backdrop-filter: blur(7px);
-        background-color: rgba(0, 0, 0, 0.247);
-        border-radius: 30px;
-    }
-
+    .p1, .p2 {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 29px;
+    width: 80%; /* responsivo */
+    max-width: 700px; /* não cresce demais em telas grandes */
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    backdrop-filter: blur(7px);
+    background-color: rgba(0,0,0,0.25);
+    border-radius: 30px;
+}
     .p1:hover,
     .p2:hover {
         transform: translateY(-5px);

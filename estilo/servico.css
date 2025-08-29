@@ -7,6 +7,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* Importa a fonte Poppins */
 
+/* --- RESPONSIVIDADE --- */
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
+    .inicial5 h1 {
+        font-size: 36px;
+    }
+
+    .inicial5 nav ul {
+        gap: 20px;
+    }
+
+    .container5 h1 {
+        font-size: 40px;
+    }
+
+    .container5 p {
+        font-size: 22px;
+    }
+
+    .container5 p > span {
+        font-size: 32px;
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+    .inicial5 h1 {
+        font-size: 28px;
+    }
+
+    .inicial5 nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container5 h1 {
+        font-size: 32px;
+    }
+
+    .container5 p {
+        font-size: 20px;
+    }
+
+    .container5 p > span {
+        font-size: 28px;
+    }
+
+    .botao img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    .inicial5 h1 {
+        font-size: 22px;
+    }
+
+    .container5 h1 {
+        font-size: 28px;
+    }
+
+    .container5 p {
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .container5 p > span {
+        font-size: 24px;
+    }
+
+    .botao img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 /* Configurações gerais */
 html,
 body {
