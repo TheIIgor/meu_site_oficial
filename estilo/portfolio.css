@@ -37,6 +37,34 @@
     }
 }
 
+/* Celulares grandes (largura máxima de 768px) */
+@media (max-width: 768px) {
+    .inicial-item h1 {
+        font-size: 28px;
+    }
+
+    .inicial-item nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container-item h1 {
+        font-size: 40px;
+    }
+
+    .container-item p {
+        font-size: 22px;
+    }
+
+    .container-item p > span {
+        font-size: 32px;
+    }
+
+    .botao img {
+        width: 45px;
+        height: 45px;
+    }
+}
 
 /* Celulares pequenos (largura máxima de 480px) */
 @media (max-width: 480px) {
@@ -65,50 +93,45 @@
 
 /* Ajustes para telas pequenas */
 @media (max-width: 768px) {
-  /* Título principal do header */
+  /* Título principal */
   .inicial-item h1 {
-    font-size: 24px;
-    white-space: normal; /* permite quebrar linha */
+    font-size: 28px; /* menor que o desktop */
   }
 
-  /* Menu */
+  /* Links do menu */
   .inicial-item nav ul {
-    flex-direction: column;
-    gap: 10px;
-    padding: 0;
+    flex-direction: column; /* menu vertical */
+    gap: 15px;
   }
 
   .inicial-item nav ul li a {
-    font-size: 14px;
-    padding: 6px 8px;
-    margin: 3px;
+    font-size: 16px;
+    padding: 8px;
+    margin: 5px;
   }
 
-  /* Container principal */
+  /* Containers de conteúdo */
   .container-item {
-    width: 95%; /* ocupar quase toda a tela */
     padding: 10px;
+    width: 95%;
   }
 
   .container-item h1 {
-    font-size: 28px;
-    margin: 8px 0;
+    font-size: 32px;
   }
 
   .container-item p {
-    font-size: 16px;
-    margin: 6px 0;
-    padding: 6px;
+    font-size: 18px;
   }
 
-  /* Botão de contato */
+  /* Ajuste para botões de contato */
   .botao img {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
   }
 
   .contato-info {
-    width: 180px;
+    width: 200px;
     height: auto;
     font-size: 12px;
   }
