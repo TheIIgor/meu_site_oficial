@@ -9,6 +9,49 @@
     <title>Sobre | CodingLink</title>
 </head>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.abrir-whatsapp').addEventListener('click', () => {
+    const telefone = '+5511939469382'; // seu número (formato internacional)
+    const mensagem = 'Olá! Seja bem-vindo a CodeLink. Como podemos te ajudar?';
+    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+  });
+});
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.abrir-email').addEventListener('click', () => {
+      const email = 'igorribeiro793@gmail.com';
+      window.location.href = `mailto:${email}`;
+    });
+  });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Captura o nome da página atual
+  const paginaAtual = window.location.pathname.split("/").pop();
+
+  // Seleciona todos os links do menu
+  const links = document.querySelectorAll("nav a");
+
+  links.forEach(link => {
+    // Se o href do link contém a página atual, adiciona a classe "active"
+    if (link.getAttribute("href") === paginaAtual) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+</script>
+
 <body>
     <header class="inicial1">
         <h1>CodingLink</h1>
@@ -20,63 +63,19 @@
                 <li><a href="index4.html">Portfólio</a></li>
             </ul>
             <button class="botao">
-                <img src="fotos/cardapio.png" alt="Texto alternativo" width="20" height="20">
-                <div class="contato-info1">
-                    <p><a href="mailto:igorribeiro793@gmail.com" target="_blank" class="email-link">Email:
-                            igorribeiro793@gmail.com</a></p>
-                    <p><span class="abrir-whatsapp">WhatsApp: +55 (11)939469382</span></p>
-                    <p><span class="linkedin"><a href="https://www.linkedin.com/in/igor-ribeiro-b974a923a/"
-                                target="_blank">LinkedIn: Igor Ribeiro</a></span></p>
-                </div>
-            </button>
-            <script>
-                // Função para abrir o WhatsApp ao clicar no texto
-                document.querySelector('.abrir-whatsapp').addEventListener('click', function () {
-                    const telefone = '+5511939469382'; // Substitua pelo seu número (formato internacional)
-                    const mensagem = 'Olá! Seja bem-vindo a CodeLink. Como podemos te ajudar?'; // Mensagem padrão'
-                    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
-                    window.open(url, '_blank');
-                });
-            </script>
-            <script>
-                // Função para o e-mail: escolher entre copiar ou abrir o cliente de e-mail
-                document.querySelector('.copiar-ou-email').addEventListener('click', function () {
-                    const email = 'exemplo@email.com'; // Substitua pelo seu e-mail
-
-                    // Pergunta ao usuário o que ele deseja fazer
-                    const escolha = confirm('Deseja copiar o e-mail ou abrir o cliente de e-mail?\n\nClique em "OK" para copiar o e-mail.\nClique em "Cancelar" para abrir o cliente de e-mail.');
-
-                    if (escolha) {
-                        // Copiar o e-mail
-                        navigator.clipboard.writeText(email).then(function () {
-                            alert('E-mail copiado: ' + email);
-                        }).catch(function () {
-                            alert('Erro ao copiar o e-mail.');
-                        });
-                    } else {
-                        // Abrir o cliente de e-mail
-                        window.location.href = `mailto:${email}`;
-                    }
-                });
-            </script>
-            <script>
-                // Captura o nome da página atual
-                const paginaAtual = window.location.pathname.split("/").pop();
-        
-                // Seleciona todos os links do menu
-                const links = document.querySelectorAll("nav a");
-        
-                links.forEach(link => {
-                    // Se o href do link contém a página atual, adiciona a classe "active"
-                    if (link.getAttribute("href") === paginaAtual) {
-                        link.classList.add("active");
-                    }
-                });
-            </script>
-            </button>
+          <img src="fotos/cardapio.png" alt="Texto alternativo" width="20" height="20">
+          <div class="contato-info">
+            <p><a href="mailto:igorribeiro793@gmail.com" target="_blank" class="email-link">Email:
+                igorribeiro793@gmail.com</a></p>
+            <p class="abrir-whatsapp">WhatsApp: +55 (11)939469382</p>
+            <p><span class="linkedin"><a href="https://www.linkedin.com/in/igor-ribeiro-b974a923a/" target="_blank"
+                  class="abrir-linkedin">LinkedIn: Igor Ribeiro</a></span></p>
+          </div>
+        </button>
         </nav>
     </header>
     <section><br><br><br><br><br><br><br>
+        <div class="principal1">
         <div class="p1">
             <p>A CodingLink é uma empresa de desenvolvimento web que atua no mercado desde 2025. Nossa missão é ajudar
                 empresas e profissionais a terem uma presença online de sucesso.</p>
@@ -100,9 +99,10 @@
                 soluções eficientes e inovadoras. Acredito que a programação é mais do que apenas escrever código — é a
                 possibilidade de resolver problemas reais e contribuir positivamente para o mundo ao meu redor.</p>
         </div>
+      </div>
     </section>
     <footer class="final1">
-        <p>Todos os direitos reservados &copy;2025</p>
+        <p>&copy;2025 Igor Todos os direitos reservados</p>
     </footer>
 
 </body>

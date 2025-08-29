@@ -6,6 +6,11 @@
 
 /* Configurações gerais */
 html, body {
+    background-image: url('../fotos/fundo1.jpg')!important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
     display: flex; /* Permite usar flexbox */
     flex-direction: column; /* Alinha os elementos verticalmente */
     min-height: 100vh; /* Ocupa toda a altura da tela */
@@ -13,10 +18,6 @@ html, body {
     width: 100%; /* Ocupa toda a largura */
     padding: 0; /* Remove o espaçamento padrão */
     margin: 0; /* Remove a margem padrão */
-    background-image: url('fotos/pexels-danbuilds-633409.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 /* Estilo para o conteúdo */

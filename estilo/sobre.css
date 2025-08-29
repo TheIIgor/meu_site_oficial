@@ -6,107 +6,106 @@
 
 /* Configurações gerais */
 html, body {
-    display: flex; /* Permite usar flexbox */
-    flex-direction: column; /* Alinha os elementos verticalmente */
-    min-height: 100vh; /* Ocupa toda a altura da tela */
-    overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
-    width: 100%; /* Ocupa toda a largura */
-    padding: 0; /* Remove o espaçamento padrão */
-    margin: 0; /* Remove a margem padrão */
-    background-image: url('fotos/pexels-danbuilds-633409.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url('../fotos/fundo1.jpg')!important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
 }
 
-/* Estilo para o conteúdo */
 .content {
-    position: relative; /* Permite posicionar os elementos filhos */
-    z-index: 1; /* Coloca o conteúdo na frente do vídeo */
-    color: white; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
-    padding: 20px; /* Espaçamento interno */
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 /* Header fixo e centralizado */
 .inicial1 {
-    position: fixed; /* Fixa o header no topo */
-    top: 0; /* Alinha no topo da página */
-    left: 0; /* Alinha à esquerda */
-    width: 100%; /* Ocupa toda a largura */
-    display: flex; /* Permite usar flexbox */
-    flex-direction: column; /* Alinha os elementos verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    backdrop-filter: blur(5px); /* Efeito de desfoque */
-    background-color: #00000000; /* Cor de fundo com transparência */
-    z-index: 1000; /* Garante que fique acima de outros elementos */
-    padding: 10px 0; /* Espaçamento interno */
-    margin: 0; /* Remove a margem padrão */
-    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219); /* Sombra */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(100%);
+    background-color: #00000000;
+    z-index: 1000;
+    padding: 10px 0;
+    margin: 0;
 }
  
 /* Estilo do título */
 .inicial1 h1 {
-    color: white; /* Cor do título */
-    font-size: 44px; /* Tamanho da fonte */
-    margin: 0; /* Remove a margem padrão */
-    padding: 0; /* Remove o espaçamento padrão */
-    text-align: center; /* Alinha o texto ao centro */        
-    display: inline-block; /* Permite ajustar a largura do elemento */
-    white-space: nowrap; /* Impede que o texto quebre */
-    font-family: "Poppins", sans-serif; /* Fonte do texto */
-    font-weight: 100; /* Peso da fonte */
-    font-style: normal; /* Estilo da fonte */   
+    color: white;
+    font-size: 44px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;  
 }
 
 /* Estilo da navegação */
 .inicial1 nav {
-    display: flex; /* Permite usar flexbox */
-    margin: 10px 0; /* Espaçamento externo */
-    gap: 10px; /* Espaçamento entre os elementos */
-    justify-content: center; /* Centraliza os itens da navegação */
-    flex-wrap: wrap; /* Quebra a linha se não couber na tela */
-    border-radius: 10px; /* Borda arredondada */
+    display: flex;
+    margin: 10px 0;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
 }
 
 /* Estilo da lista de navegação */
 .inicial1 nav ul {
-    list-style: none; /* Remove a marcação da lista */
-    padding: 0; /* Remove o espaçamento interno */
-    margin: 0; /* Remove a margem padrão */
-    display: flex; /* Permite usar flexbox */
-    justify-content: center; /* Centraliza os itens da lista */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 /* Estilo dos itens da navegação */ 
 .inicial1 nav ul li {
-    display: inline-block; /* Permite ajustar a largura do elemento */
-    margin-right: 20px; /* Espaçamento à direita */
+   display: inline-block;
+    margin-right: 20px;
 }
 
 /* Estilo do link */
 .inicial1 nav ul li a {
-    color: white; /* Cor do texto */
-    font-family: "Poppins", sans-serif; /* Fonte do texto */
-    font-weight: 100; /* Peso da fonte */
-    font-style: normal; /* Estilo da fonte */
-    font-size: 20px; /* Tamanho da fonte */
-    padding: 10px; /* Espaçamento interno */
-    margin: 10px; /* Espaçamento externo */   
-    text-decoration: none; /* Remove o sublinhado */
-    border-radius: 30px; /* Borda arredondada */
-    text-align: center; /* Alinha o texto ao centro */
-    display: inline-block; /* Permite ajustar a largura do elemento */
+   color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 30px;
+    text-align: center;
+    display: inline-block;
 }
 
 /* Estilo do link ativo */
 .inicial1 nav ul li a:hover {
-    background-color: #ffffff30; /* Cor de fundo com transparência */
-    border-radius: 30px; /* Borda arredondada */    
-    margin: 10px; /* Espaçamento externo */
-    padding: 10px; /* Espaçamento interno */
-    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219); /* Sombra */
+    background-color: #ffffff30;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.699);
+    transform: translateY(2px);
     
 }
 
@@ -115,188 +114,113 @@ html, body {
     font-weight: bold;
 }
 
-/* Estilo do botão de contato */
-.botao {
-    position: relative; /* Permite posicionar a janela de informações relativamente ao botão */
-    padding: 0; /* Remove o espaçamento interno */
-    margin: 0; /* Remove a margem padrão */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    border: none; /* Remove a borda */
-    backdrop-filter: blur(10s); /* Efeito de desfoque */
-    background-color: #ffffff00; /* Cor de fundo com transparência */
+.botao{
+    background-color: transparent;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border: none;
 }
- 
-/* Estilo do botão de contato */
+
 .botao img{
-    width: 50px; /* Largura da imagem */  
-    height: 50px; /* Altura da imagem */
-    padding: auto; /* Espaçamento interno */
-    margin: auto; /* Espaçamento externo */
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
 }
 
-/* Estilo do botão de contato ao passar o mouse */
-.botao img:hover{
-    background-color: #ffffff30; /* Cor de fundo com transparência */
-    border-radius: 30px; /* Borda arredondada */
-    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219); /* Sombra */
-    padding: 0; /* Espaçamento interno */
-    margin: 0; /* Espaçamento externo */
+.botao img:hover {
+    padding: 0; 
+    margin: 0;
+    transform: translateY(2px);
 }
 
-/* Estilo do contêiner do botão de contato */
-.botao-container:hover .contato-info1,
-.botao-container:focus-within .contato-info1 {
-    display: block; /* Mostra a janela de informações */
+.botao-container:hover .contato-info,
+.botao-container:focus-within .contato-info {
+    display: block;
 }
 
-  
-/* Estilo da janela de informações */
-.contato-info1 {
-    display: none; /* Inicialmente escondido */
-    position: absolute; /* Permite posicionar a janela de informações */
-    top: -50%; /* Posiciona a janela abaixo do botão */
-    left: 105%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajusta o posicionamento*/
-    background-color: #ffffff30; /* Cor de fundo com transparência */
-    border-radius: 30px; /* Borda arredondada */
-    padding: 15px; /* Espaçamento interno */
-    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219); /* Sombra */
-    width: 280px; /* Largura da janela */
-    z-index: 1000; /* Garante que fique acima de outros elementos */
-    text-align: center; /* Alinha o texto ao centro */
-    word-wrap: break-word; /* Quebra de linha automática */
-    transform: translate3d(0, 0, 0); /* Corrige o bug de renderização */
+.contato-info {
+    display: none;
+    position: absolute;
+    top: -50%;
+    left: 100%;
+    background-color: #000000;
+    border-radius: 30px;
+    padding: 0px;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.699);
+    width: 300px;
+    height: 130px;
+    text-align: center;
+    word-wrap: break-word;
 }
 
-/* Mostrar a janela de informações ao passar o mouse */
-.botao:hover .contato-info1 {
-    display: block; /* Mostra a janela de informações */
-}
-  
-/* Estilo dos textos dentro da janela de informações */
-.contato-info1 p {
-    margin: 10px 0; /* Espaçamento externo */
-    font-size: 20px; /* Tamanho da fonte */    
-    color: #ffffff; /* Cor do texto */
-    line-height: 0.9; /* Espaçamento entre as linhas */   
-    word-wrap: break-word; /* Quebra de linha automática */
-
+.botao:hover .contato-info {
+    display: block;
 }
 
-/* Estilo dos links dentro da janela de informações */ 
-.contato-info1 a, .linkedin {
-    color: #ffffff; /* Cor do texto */
-    font-weight: bold; /* Texto em negrito */
-    font-size: 14px; /* Texto em negrito */
-    text-decoration: none; /* Texto em negrito */
-    font-family: "Poppins", sans-serif; /* Texto em negrito */
-    font-weight: 100; /* Texto em negrito */
-    font-style: normal; /* Texto em negrito */
+.contato-info p, .contato-info a, .abrir-whatsapp p{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 10;
+    padding: 10;
+}
+.contato-info a:hover, .contato-info p:hover, .abrir-linkedin:hover {
+    text-decoration: underline;
+    font-weight: 300;
+    color: #ffffff;
 }
 
-/* Estilo dos links ao passar o mouse */
-.contato-info1 a:hover, .abrir-whatsapp:hover{
-    text-decoration: underline; /* Texto em negrito */
-    word-wrap: break-word; /* Texto em negrito */
-    font-weight: bold; /* Texto em negrito */
-    font-family: "Poppins", sans-serif; /* Texto em negrito */
-    font-weight: 100; /* Texto em negrito */
-    font-style: normal; /* Texto em negrito */
-    margin: 0; /* Texto em negrito */
-    padding: 0; /* Texto em negrito */
+.principal1 {
+    flex: 1;
+    display: inline-block;
+    flex-direction: column;
+    
+    padding: 0;
 }
 
-/* Estilo do link de e-mail */
-.email-link {
-    cursor: pointer; /* Texto em negrito */
-    color: #ffffff; /* Cor do texto */
-}
-
-/* Estilo do link de e-mail ao passar o mouse */
-.abrir-whatsapp {
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    color: #ffffff; /* Cor do texto */
-    font-weight: bold; /* Texto em negrito */
-    font-size: 14px; /* Texto em negrito */
-    font-family: "Poppins", sans-serif; /* Texto em negrito */
-    font-weight: 100; /* Texto em negrito */
-    font-style: normal; /* Texto em negrito */
-}
-
-
-.p1{
+.p1, .p2{
     color: white; /* Texto em negrito */
     font-family: "Poppins", sans-serif; /* Texto em negrito */
     font-weight: 200; /* Texto em negrito */
     font-style: normal; /* Texto em negrito */
     font-size: 30px; /* Texto em negrito */
-    margin-top: 50px;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin: auto;
     padding: auto; /* Texto em negrito */
     text-align: center; /* Texto em negrito */
-    backdrop-filter: blur(7px); /* Texto em negrito */
-    background-color: #000000; /* Texto em negrito */
+    backdrop-filter: blur(7px);
+    background-color: rgba(0, 0, 0, 0.247);
     border-radius: 30px; /* Texto em negrito */
 }
 
-.p1:hover{
+.p1:hover, .p2:hover{
     transform: translateY(-5px);
-    background-color: rgba(0, 0, 0, 0.521);
-    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219); /* Texto em negrito */
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 2px  rgb(255, 255, 255);
 }
 
-.p2{
-    color: white; /* Texto em negrito */
-    font-family: "Poppins", sans-serif; /* Texto em negrito */
-    font-weight: 200; /* Texto em negrito */
-    font-style: normal; /* Texto em negrito */
-    font-size: 22px; /* Texto em negrito */
-    margin-top: 50px;
-    margin-left: 150px;
-    margin-right: 150px;
-    padding: auto; /* Texto em negrito */
-    text-align: center; /* Texto em negrito */
-    backdrop-filter: blur(7px); /* Texto em negrito */
-    background-color: #000000; /* Texto em negrito */
-    border-radius: 30px; /* Texto em negrito */
+.final1 {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.p2:hover{
-    transform: translateY(-5px);
-    background-color: rgba(0, 0, 0, 0.521);
-    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219); /* Texto em negrito */
-}
-
-
-/* Estilo do subtítulo principal */
-.final1{
-    display: flex; /* Texto em negrito */
-    justify-content: space-between; /* Texto em negrito */
-    justify-content: center; /* Texto em negrito */
-    align-items: center; /* Texto em negrito */
-    backdrop-filter: blur(5px); /* Efeito de desfoque */
-    background-color: #00000000; /* Texto em negrito */
-    box-shadow: 4px 2px 50px 2px rgba(255, 255, 255, 0.219); /* Texto em negrito */
-    padding: 10px 20px; /* Texto em negrito */
-    width: 100%; /* Texto em negrito */
-    margin-top: auto; /* Empurra o footer para o final */
-    flex-wrap: wrap; /* Texto em negrito */
-    font-family: "Poppins", sans-serif; /* Texto em negrito */
-    font-weight: 100; /* Texto em negrito */
-    font-style: normal; /* Texto em negrito */
-    
-}
-
-/* Estilo do texto do footer */
 .final1 p {
-    color: white; /* Texto em negrito */
-    font-size: 18px; /* Texto em negrito */
-    text-decoration: none; /* Texto em negrito */
-    border-radius: 10px; /* Texto em negrito */
-    margin: 0; /* Texto em negrito */
-    padding: 0; /* Texto em negrito */
-    display: inline-block; /* Texto em negrito */
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 

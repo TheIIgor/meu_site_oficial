@@ -9,6 +9,43 @@ git add index.html index2.html index3.html index4.html<!DOCTYPE html>
     <title>Portfólio | CodingLink</title>
 </head>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.abrir-whatsapp').addEventListener('click', () => {
+    const telefone = '+5511939469382'; // seu número (formato internacional)
+    const mensagem = 'Olá! Seja bem-vindo a CodeLink. Como podemos te ajudar?';
+    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+  });
+});
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.abrir-email').addEventListener('click', () => {
+      const email = 'igorribeiro793@gmail.com';
+      window.location.href = `mailto:${email}`;
+    });
+  });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Captura o nome da página atual
+  const paginaAtual = window.location.pathname.split("/").pop();
+
+  // Seleciona todos os links do menu
+  const links = document.querySelectorAll("nav a");
+
+  links.forEach(link => {
+    // Se o href do link contém a página atual, adiciona a classe "active"
+    if (link.getAttribute("href") === paginaAtual) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
 <body>
     <header class="inicial-item">
         <h1>CodingLink</h1>
@@ -29,51 +66,6 @@ git add index.html index2.html index3.html index4.html<!DOCTYPE html>
                         <p><span class="linkedin"><a href="https://www.linkedin.com/in/igor-ribeiro-b974a923a/"
                                     target="_blank">LinkedIn: Igor Ribeiro</a></span></p>
                     </div>
-                </button>
-                <script>
-                    // Função para abrir o WhatsApp ao clicar no texto
-                    document.querySelector('.abrir-whatsapp').addEventListener('click', function () {
-                        const telefone = '+5511939469382'; // Substitua pelo seu número (formato internacional)
-                        const mensagem = 'Olá! Seja bem-vindo a CodeLink. Como podemos te ajudar?'; // Mensagem padrão'
-                        const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
-                        window.open(url, '_blank');
-                    });
-                </script>
-                <script>
-                    // Função para o e-mail: escolher entre copiar ou abrir o cliente de e-mail
-                    document.querySelector('.copiar-ou-email').addEventListener('click', function () {
-                        const email = 'exemplo@email.com'; // Substitua pelo seu e-mail
-
-                        // Pergunta ao usuário o que ele deseja fazer
-                        const escolha = confirm('Deseja copiar o e-mail ou abrir o cliente de e-mail?\n\nClique em "OK" para copiar o e-mail.\nClique em "Cancelar" para abrir o cliente de e-mail.');
-
-                        if (escolha) {
-                            // Copiar o e-mail
-                            navigator.clipboard.writeText(email).then(function () {
-                                alert('E-mail copiado: ' + email);
-                            }).catch(function () {
-                                alert('Erro ao copiar o e-mail.');
-                            });
-                        } else {
-                            // Abrir o cliente de e-mail
-                            window.location.href = `mailto:${email}`;
-                        }
-                    });
-                </script>
-                <script>
-                    // Captura o nome da página atual
-                    const paginaAtual = window.location.pathname.split("/").pop();
-            
-                    // Seleciona todos os links do menu
-                    const links = document.querySelectorAll("nav a");
-            
-                    links.forEach(link => {
-                        // Se o href do link contém a página atual, adiciona a classe "active"
-                        if (link.getAttribute("href") === paginaAtual) {
-                            link.classList.add("active");
-                        }
-                    });
-                </script>
                 </button>
             </nav>
         </section>
@@ -107,10 +99,8 @@ git add index.html index2.html index3.html index4.html<!DOCTYPE html>
 
     </section>
     <footer class="final-item">
-        <p>Todos os direitos reservados &copy;2025</p>
+        <p>&copy;2025 Igor Todos os direitos reservados</p>
     </footer>
 
 </body>
-
->>>>>>> 6b8052b (..)
 </html>

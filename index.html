@@ -11,42 +11,6 @@
   <link rel="stylesheet" href="estilo/portfolio.css">
   <link rel="shortcut icon" href="fotos/Codelink.png" type="image/x-icon">
 </head>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('.abrir-whatsapp').addEventListener('click', () => {
-    const telefone = '+5511939469382'; // seu número (formato internacional)
-    const mensagem = 'Olá! Seja bem-vindo a CodeLink. Como podemos te ajudar?';
-    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
-    window.open(url, '_blank');
-  });
-});
-</script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.abrir-email').addEventListener('click', () => {
-      const email = 'igorribeiro793@gmail.com';
-      window.location.href = `mailto:${email}`;
-    });
-  });
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Captura o nome da página atual
-  const paginaAtual = window.location.pathname.split("/").pop();
-
-  // Seleciona todos os links do menu
-  const links = document.querySelectorAll("nav a");
-
-  links.forEach(link => {
-    // Se o href do link contém a página atual, adiciona a classe "active"
-    if (link.getAttribute("href") === paginaAtual) {
-      link.classList.add("active");
-    }
-  });
-});
-</script>
 
 <body>
   <header class="inicial">
@@ -62,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <button class="botao">
           <img src="fotos/cardapio.png" alt="Texto alternativo" width="20" height="20">
           <div class="contato-info">
-            <p><a href="mailto:igorribeiro793@gmail.com" target="_blank" class="email-link">Email:
+            <p><a href="mailto:igorribeiro793@gmail.com" target="_blank" class="abrir-email">Email:
                 igorribeiro793@gmail.com</a></p>
             <p class="abrir-whatsapp">WhatsApp: +55 (11)939469382</p>
             <p><span class="linkedin"><a href="https://www.linkedin.com/in/igor-ribeiro-b974a923a/" target="_blank"
@@ -79,8 +43,48 @@ document.addEventListener('DOMContentLoaded', () => {
     </section>
   </main>
   <footer class="final">
-    <p>Todos os direitos reservados &copy;2025</p>
+    <p>&copy;2025 Igor Todos os direitos reservados</p>
   </footer>
+
+  <!-- Scripts no final -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // WhatsApp
+      const whatsapp = document.querySelector('.abrir-whatsapp');
+      if (whatsapp) {
+        whatsapp.addEventListener('click', () => {
+          const telefone = '+5511939469382';
+          const mensagem = 'Olá! Seja bem-vindo a CodeLink. Como podemos te ajudar?';
+          const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+          window.open(url, '_blank');
+        });
+      }
+
+      // Email
+      const email = document.querySelector('.abrir-email');
+      if (email) {
+        email.addEventListener('click', (e) => {
+          e.preventDefault();
+          const endereco = 'igorribeiro793@gmail.com';
+          window.location.href = `mailto:${endereco}`;
+        });
+      }
+
+      // Destacar página ativa no menu
+      const paginaAtual = window.location.pathname.split("/").pop();
+      const links = document.querySelectorAll("nav a");
+      links.forEach(link => {
+        if (link.getAttribute("href") === paginaAtual) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    // Animação de carregamento
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+  </script>
 </body>
 
 </html>

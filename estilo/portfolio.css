@@ -34,6 +34,11 @@
 
 /* Configurações gerais */
 html, body {
+    background-image: url('../fotos/fundo1.jpg')!important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
     display: flex; /* Permite usar flexbox */
     flex-direction: column; /* Alinha os elementos verticalmente */
     min-height: 100vh; /* Ocupa toda a altura da tela */
