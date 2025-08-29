@@ -58,8 +58,8 @@ body {
     display: flex;
     margin: 20px;
     justify-content: center;
-        flex-wrap: wrap;
-        border-radius: 10px;
+    flex-wrap: wrap;
+    border-radius: 10px;
 }
 
 .inicial nav ul {
@@ -198,9 +198,9 @@ body {
 }
 
 .principal h2:hover {
-   transform: translateY(-5px);
-        background-color: rgb(0, 0, 0);
-        box-shadow: 0px 0px 2px rgb(255, 255, 255);
+    transform: translateY(-5px);
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 2px rgb(255, 255, 255);
 }
 
 .final1 {
